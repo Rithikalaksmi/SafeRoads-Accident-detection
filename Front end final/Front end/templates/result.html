@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result - Saferoads</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='prediction.css') }}">
+</head>
+<body>
+    <div class="result-container">
+        <a href="/prediction" class="back-button">Go Back</a> <!-- Back button to the prediction input page -->
+        <h1>Prediction Result</h1>
+        
+        <div class="result-card">
+            <h2>Predicted Class</h2>
+            <p>{{ result.predicted_class }}</p>
+        </div>
+        
+        <div class="result-card">
+            <h2>Probability</h2>
+            <p>{{ result.probability | round(2) }}</p>
+        </div>
+    </div>
+</body>
+</html>

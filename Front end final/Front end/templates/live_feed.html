@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Feed - Saferoads</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='live_feed.css') }}">
+</head>
+<body>
+    <div class="live-feed-container">
+        <h1>Live Feed</h1>
+        <p>Access live updates about road conditions.</p>
+
+        <!-- Single button for checking accidents -->
+        <form id="accident-form" action="{{ url_for('live_feed') }}" method="POST" enctype="multipart/form-data">
+            <label for="file-upload" class="check-accidents-button">Check for Accidents</label>
+            <input type="file" id="file-upload" name="file" accept="video/*" style="display: none;">
+        </form>
+
+        <a href="/" class="back-button">Go Back</a>
+    </div>
+
+    <script>
+        // Only add one event listener to the button
+        document.querySelector('.check-accidents-button').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById('file-upload').click(); // Open the file explorer
+        });
+
+        // Automatically submit the form when a file is selected
+        document.getElementById('file-upload').addEventListener('change', function() {
+            if (this.files.length > 0) { // Check if a file is selected
+                document.getElementById('accident-form').submit(); // Submit the form
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f4c75, #3282b8, #bbe1fa);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main container */
+.container {
+    text-align: center;
+    background-color: white; /* Ensure the container has a white background */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px; /* Keep it centered and constrained */
+}
+
+/* Title and subtitle styling */
+.title {
+    font-size: 3.5rem;
+    color: #1b262c; /* Dark color for title */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #3282b8; /* Blue color for subtitle */
+    margin-bottom: 2rem; /* Spacing between subtitle and buttons */
+}
+
+/* Styling the buttons container */
+.buttons {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    gap: 1.5rem; /* Add gap between buttons */
+}
+
+/* Button styling with different colors */
+.animated-button {
+    padding: 0.9rem 1.8rem; /* Adjusted padding for smaller buttons */
+    font-size: 1.3rem; /* Smaller font size */
+    font-weight: bold;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px; /* Slightly smaller border radius */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none; /* Remove underline from buttons */
+}
+
+/* Hover effects for buttons */
+.animated-button:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific button styles */
+.btn-stats {
+    background-color: #0f4c75; /* Dark blue for stats button */
+}
+
+.btn-stats:hover {
+    background-color: #3282b8; /* Lighter blue on hover */
+}
+
+.btn-prediction {
+    background-color: #1b262c; /* Dark gray for prediction button */
+}
+
+.btn-prediction:hover {
+    background-color: #0f4c75; /* Change to dark blue on hover */
+}
+
+.btn-live {
+    background-color: #3282b8; /* Light blue for live button */
+}
+
+.btn-live:hover {
+    background-color: #bbe1fa; /* Light background on hover */
+}
+
+/* Keyframes for subtle bounce animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-2.5px);
+    }
+}
+
+/* Animate buttons continuously */
+.animated-button {
+    animation: bounce 2s infinite; /* Apply bounce animation */
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction - Saferoads</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='prediction.css') }}">
+</head>
+<body>
+    <div class="prediction-container">
+        <a href="/" class="back-button">Go Back</a> <!-- Back button at the top left -->
+        <h1>Prediction</h1>
+        <p>Get predictions about road safety risks.</p>
+
+        <!-- Form for user input -->
+        <form action="/prediction" method="POST">
+            <div class="input-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="Enter location" required>
+            </div>
+
+            <div class="input-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="input-group">
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+
+            <!-- Button for safety check -->
+            <button type="submit" class="safe-button">Is Safe?</button>
+        </form>
+
+        <!-- Display prediction results if available -->
+        {% if result %}
+            <div class="result-container">
+                <h2>Prediction Result</h2>
+                <p>Predicted Class: <strong>{{ result.predicted_class }}</strong></p>
+                <p>Probability: <strong>{{ result.probability | round(2) }}</strong></p>
+            </div>
+        {% endif %}
+    </div>
+
+    <script>
+        // Set default date and time to current system values
+        const now = new Date();
+        document.getElementById('date').value = now.toISOString().split('T')[0]; // Set current date
+        document.getElementById('time').value = now.toTimeString().split(':').slice(0, 2).join(':'); // Set current time
+    </script>
+</body>
+</html>

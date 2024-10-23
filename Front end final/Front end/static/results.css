@@ -1,0 +1,71 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 0;
+}
+
+.result-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 50px auto; /* Center the container */
+    position: relative;
+}
+
+/* Title Styles */
+.result-container h1 {
+    color: #00796b;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Result Text Styles */
+.result-container p {
+    color: #004d40;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+/* Styles for the back button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #00796b;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+/* Result Card Styles */
+.result-card {
+    border: 1px solid #00796b;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    background-color: #f0f4f4;
+}
+
+.result-card h2 {
+    color: #00796b;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.result-card p {
+    color: #004d40;
+    font-size: 1.2rem;
+}

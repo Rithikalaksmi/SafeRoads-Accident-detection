@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saferoads</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Main title of the application -->
+        <h1 class="title">Saferoads</h1>
+        <p class="subtitle">Your guide to safer roads and accurate predictions</p>
+        
+        <!-- Button container with links to different sections -->
+        <div class="buttons">
+            <a href="/statistics" class="animated-button btn-stats">Statistics</a>
+            <a href="/prediction" class="animated-button btn-prediction">Prediction</a>
+            <a href="/live_feed" class="animated-button btn-live">Live Feed</a>
+        </div>
+    </div>
+
+    <!-- Script section (optional if JavaScript is needed) -->
+    <!-- <script src="path/to/your/script.js"></script> -->
+</body>
+</html>

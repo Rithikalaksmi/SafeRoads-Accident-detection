@@ -1,0 +1,69 @@
+/* Live Feed Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffebee; /* Light red/pinkish background for the body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.live-feed-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.live-feed-container h1 {
+    color: #b71c1c; /* Dark red for the heading */
+    font-size: 3rem;
+}
+
+.live-feed-container p {
+    color: #d32f2f; /* Medium red for the paragraph */
+    font-size: 1.3rem;
+}
+
+/* Button styling for Check for Accidents */
+.check-accidents-button {
+    display: inline-block; /* Make the label block-level to act as a button */
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #b71c1c; /* Dark red for the button */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 1.5rem 0; /* Margin for spacing */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.check-accidents-button:hover {
+    background-color: #d32f2f; /* Medium red for hover effect */
+}
+
+/* Hide the actual file input */
+#file-upload {
+    display: none;
+}
+
+/* Back button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #b71c1c; /* Dark red for the button */
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #d32f2f; /* Medium red for hover effect */
+}

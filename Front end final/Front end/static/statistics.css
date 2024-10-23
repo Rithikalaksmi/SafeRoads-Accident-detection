@@ -1,0 +1,93 @@
+/* Statistics Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fefae0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.statistics-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.statistics-container h1 {
+    color: #8b4513;
+    font-size: 3rem;
+}
+
+.statistics-container p {
+    color: #cd853f;
+    font-size: 1.3rem;
+}
+
+/* Ensuring plots/iframe/images have the same size and are responsive */
+iframe, img, .plot {
+    max-width: 100%;
+    height: 500px; /* Fixed height for all plots/images */
+    width: 100%; /* Ensures uniform width */
+    margin: 20px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for consistent look */
+}
+
+/* Ensure plots are aligned consistently */
+.plot {
+    object-fit: contain; /* Ensures content fits within the defined size without distortion */
+}
+
+/* Back button styling */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #8b4513;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #cd853f;
+}
+
+/* Adjusting smaller screens for responsiveness */
+@media (max-width: 768px) {
+    iframe, img, .plot {
+        height: auto;
+    }
+}
+
+
+.image-row {
+    display: flex;
+    justify-content: space-between; /* space between images */
+    flex-wrap: wrap; /* allow wrapping for smaller screens */
+    margin-bottom: 20px; /* spacing between rows */
+}
+
+.image-row img {
+    max-width: 40%; /* allow images to take up half the width */
+    height: auto; /* maintain aspect ratio */
+    margin-bottom: 10px; /* spacing between rows */
+}

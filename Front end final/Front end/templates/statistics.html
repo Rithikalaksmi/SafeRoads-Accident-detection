@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/styles.css"> <!-- Link to your CSS file -->
+    <title>Accident Statistics</title>
+</head>
+<body>
+    <h1>Accident Statistics</h1>
+
+    <h2>Accident Zones Map</h2>
+    <iframe src="{{ url_for('static', filename='maps/accident_zones_map_with_markers.html') }}" width="100%" height="700" style="border:none;"></iframe>
+
+    <h2>Urban and Rural Areas Distribution</h2>
+    <div class="image-row">
+        <img src="static/images/urban_rural_distribution.png" alt="Urban and Rural Areas Distribution">
+        <img src="static/images/accident_severity_distribution.png" alt="Accident Severity Distribution">
+    </div>
+
+    <h2>Weather Conditions Distribution</h2>
+    <div class="image-row">
+        <img src="static/images/weather_conditions_distribution.png" alt="Weather Conditions Distribution">
+        <img src="static/images/accidents_by_day_of_week.png" alt="Accidents by Day of the Week">
+    </div>
+
+    <h2>Weather Conditions vs. Accident Severity</h2>
+    <img src="static/images/weather_vs_severity.png" alt="Weather Conditions vs. Accident Severity">
+
+    <h2>Accidents by Road Surface Conditions</h2>
+    <img src="static/images/road_surface_conditions.png" alt="Accidents by Road Surface Conditions">
+
+    <h2>Total Casualties by Speed Limit</h2>
+    <img src="static/images/casualties_by_speed_limit.png" alt="Total Casualties by Speed Limit">
+
+    <h2>Total Casualties by Accident Severity</h2>
+    <img src="static/images/casualties_by_accident_severity.png" alt="Total Casualties by Accident Severity">
+
+    <h2>Monthly Casualties Over Years</h2>
+    <img src="static/images/monthly_casualties.png" alt="Monthly Casualties Over Years">
+
+    <h2>Number of Accidents by Hour</h2>
+    <img src="static/images/accidents_by_hour.png" alt="Number of Accidents by Hour">
+</body>
+</html>
