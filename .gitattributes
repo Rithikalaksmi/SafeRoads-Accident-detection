@@ -1,1 +1,2 @@
 combined_accidents_data.csv filter=lfs diff=lfs merge=lfs -text
+combined_accidents_data.csv.gz filter=lfs diff=lfs merge=lfs -text
