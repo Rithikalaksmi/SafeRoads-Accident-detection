@@ -4,6 +4,7 @@ import cv2
 import numpy as np
 from flask import Flask, render_template, request, redirect, url_for
 
+
 # Add the paths for detection and prediction modules
 sys.path.append("C:/Users/rithi/OneDrive/Documents/sem 5/machine learning lab/project")
 sys.path.append("C:/Users/rithi/OneDrive/Documents/sem 5/machine learning lab/project/Accident-Detection-System-main")
